@@ -1,0 +1,11 @@
+POST http://localhost:4010/redis/
+Content-Type: application/json
+"gsdfjdkhf, jdsfosf, ljdfou09423"
+
+###
+GET http://localhost:4010/redis/?start=23&end=66
+Accept: application/json
+
+###
+
+
