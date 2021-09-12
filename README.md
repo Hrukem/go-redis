@@ -1,4 +1,4 @@
-#save data in Redis
+#save data in Redis#
 
 A blank for the future microservice. 
 Saving and returning data using Redis.
@@ -28,7 +28,7 @@ a GET request for a list of unique domains
 visited during the specified period.
 The request specifies a time interval.
 
-###Warnings:
+###Warnings:###
 - the application was tested only in LinuxMint
 - for testing and debugging, the Redis key is output to the terminal. 
 to remove this action, comment out line 47 in the *workRedis.go* file
