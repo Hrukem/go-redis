@@ -1,9 +1,42 @@
-POST http://localhost:4010/redis/
+POST http://localhost:4010/links/
 Content-Type: application/json
-"gsdfjdkhf, jdsfosf, ljdfou09423"
+
+{
+  "links": [
+    "www.instrumenty.ru/temarob/page",
+    "yand.ru",
+    "https://google.com/reserch",
+    "www.yand.ru",
+    "hip-hop.org"
+  ]
+}
 
 ###
-GET http://localhost:4010/redis/?start=23&end=66
+POST http://localhost:4010/links/
+Content-Type: application/json
+
+{
+  "links": [
+    "www.ya.ru",
+    "https://www.e-olymp.com/ru/problems?complexity=4",
+    "http://cppstudio.com/cat/285/",
+    "https://www.youtube.com/watch?v=_T2WeP4uet4",
+    "https://puzzle-english.com/?notification=e_confirmed&autologin_key=f37720711&user_email=holy@mail.ru&expire=843",
+    "https://www.advanced-mind-institute.org/store/lechenie-ozdorovlenie/dolgoletie/",
+    "www.e-olymp.com/ru/problems?complexity=4",
+    "www.ya.ru",
+    "https://progtask.ru/komandy-redis/",
+    "staminaon.com/ru/#en",
+    "hexdocs.pm/plug/Plug.Parsers.html#content",
+    "www.yandex.ru/email/id",
+    "https://progtask.ru/komandy-redis/",
+    "https://www.e-olymp.com/ru/problems?complexity=4"
+  ]
+}
+
+###
+###
+GET http://localhost:4010/domains/?start=1631279700
 Accept: application/json
 
 ###
