@@ -1,4 +1,5 @@
 #save data in Redis
+==============
 
 A blank for the future microservice. 
 Saving and returning data using Redis.
@@ -29,8 +30,9 @@ visited during the specified period.
 The request specifies a time interval.
 
 ###Warnings:
+----------
 - the application was tested only in LinuxMint
 - for testing and debugging, the Redis key is output to the terminal. 
-to remove this action, comment out line 47 in the *workRedis.go* file
+to remove this action, comment out line 49 in the *workRedis.go* file
 - for identification in Redis, a string is added to the key
-(lines 23 and 46 in the *workRedis.go* file)
+(lines 23 and 48 in the *workRedis.go* file)
