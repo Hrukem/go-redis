@@ -39,8 +39,6 @@ func getData(w http.ResponseWriter, r *http.Request) {
 		log.Println("Error json.Marshal in getData.go line 38", err3)
 	}
 
-	fmt.Println(string(mess))
-
 	log.Println("Send data from Redis")
 	_, err2 := fmt.Fprintf(w, fmt.Sprint(mess))
 	if err2 != nil {
