@@ -6,37 +6,39 @@ import (
 	"github.com/go-redis/redis/v8"
 	"log"
 	"strconv"
+	"strings"
 )
 
-var ctx = context.Background()
-
-// getRedis function take data from Redis
-func getRedis(start int, end int) []string {
+// get function take data from Redis
+func get(start int, end int) string {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
 
-	res := make([]string, 0)
+	//	res := make([]string, 0)
+	res := ""
 	for i := start; i <= end; i++ {
 		key := "Bora" + strconv.Itoa(i)
-		val, err := rdb.Get(ctx, key).Result()
+		val, err := rdb.Get(context.Background(), key).Result()
 		switch err {
 		case redis.Nil:
 			continue
 		case nil:
-			res = append(res, val)
+			//res = append(res, val)
+			res = res + val + ", "
 		default:
 			log.Println("Error get data from Redis", err)
 			continue
 		}
 	}
-	return res
+	//	return res
+	return strings.Trim(res, ", ")
 }
 
-// inputRedis function put data in Redis
-func inputRedis(str string, t int64) error {
+// put function put data in Redis
+func put(str string, t int64) error {
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     "localhost:6379",
 		Password: "", // no password set

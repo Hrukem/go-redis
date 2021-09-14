@@ -27,7 +27,7 @@ func parseLinks(s string) string {
 // converts them to strings, removes duplicates,
 // adds the result to the returned string
 func parse(sls []string) string {
-	regx := regexp.MustCompile(`[a-z]+-?[a-z]+\.[a-z]+`)
+	regx := regexp.MustCompile(`[a-z0-9]+-?[a-z0-9]+\.[a-z]+`)
 	m := make(map[string]int)
 	res := ""
 	for _, x := range sls {
